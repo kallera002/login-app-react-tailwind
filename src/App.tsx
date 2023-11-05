@@ -1,15 +1,14 @@
 import { useState } from 'react'
 import {AnimationWrapper} from './modules/common/components'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <AnimationWrapper keyValue='lorem'>
-      <h1 className="text-3xl ml-10 font-bold underline">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptatum, placeat accusantium ex saepe mollitia inventore tempore, distinctio facere laboriosam voluptate officiis eveniet, consequatur dolorem quaerat natus minus harum omnis.
-      </h1>
-    </AnimationWrapper>
+    <div className='w-screen min-h-screen bg-slate-200'>
+      <Outlet />
+    </div>
   )
 }
 
